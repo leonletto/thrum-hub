@@ -14,9 +14,6 @@ func stub(name, short string) *cobra.Command {
 
 func cmdInit() *cobra.Command     { return stub("init", "Scaffold a hub at the given path") }
 func cmdStatus() *cobra.Command   { return stub("status", "Show hub status") }
-func cmdShow() *cobra.Command     { return stub("show", "Print an entry by ID") }
-func cmdRelated() *cobra.Command  { return stub("related", "Find entries related to the given ID") }
-func cmdLs() *cobra.Command       { return stub("ls", "List curated entries") }
 func cmdFeedback() *cobra.Command { return stub("feedback", "Record thumbs up/down on a query") }
 func cmdHistory() *cobra.Command  { return stub("history", "Show recent queries") }
 func cmdDebug() *cobra.Command {
