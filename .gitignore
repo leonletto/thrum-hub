@@ -10,7 +10,7 @@ dist/
 *.swp
 
 # Local telemetry (per-machine operational data)
-telemetry/
+/telemetry/
 
 # Local config overrides
 *.local.yaml
@@ -19,3 +19,8 @@ telemetry/
 .dolt/
 *.db
 .beads-credential-key
+
+# Thrum data directory (all data lives on a-sync branch via worktree)
+.thrum/
+.thrum.*.json
+scripts/thrum-startup.sh
