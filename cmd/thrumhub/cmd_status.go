@@ -13,9 +13,15 @@ func cmdStatus() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error {
 			fmt.Printf("hub root:      %s\n", a.cfg.Root)
 			fmt.Printf("embedding:     %s (%s)\n", a.cfg.Embedding.Backend, a.cfg.Embedding.Model)
-			inboxIDs, _ := a.store.InboxList()
+			inboxIDs, err := a.store.InboxList()
+			if err != nil {
+				return fmt.Errorf("inbox list: %w", err)
+			}
 			fmt.Printf("inbox depth:   %d\n", len(inboxIDs))
-			n, _ := a.index.Count()
+			n, err := a.index.Count()
+			if err != nil {
+				return fmt.Errorf("index count: %w", err)
+			}
 			fmt.Printf("indexed:       %d\n", n)
 			return nil
 		},

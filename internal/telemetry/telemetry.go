@@ -115,10 +115,11 @@ func (t *Telemetry) RecentQueries(sourceRepo string, limit int) ([]QueryRecord, 
 	var out []QueryRecord
 	for rows.Next() {
 		var r QueryRecord
-		var repo sql.NullString
-		if err := rows.Scan(&r.ID, &r.Timestamp, &r.QueryText, &r.Agent, &repo, &r.NumResults, &r.TopScore); err != nil {
+		var agent, repo sql.NullString
+		if err := rows.Scan(&r.ID, &r.Timestamp, &r.QueryText, &agent, &repo, &r.NumResults, &r.TopScore); err != nil {
 			return nil, err
 		}
+		r.Agent = agent.String
 		r.SourceRepo = repo.String
 		out = append(out, r)
 	}
