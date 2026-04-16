@@ -1,0 +1,12 @@
+# thrum-hub local config. Copy to <hub-root>/config/hub.yaml and edit.
+root: /Users/you/dev/opensource/thrum-hub
+
+embedding:
+  backend: ollama          # ollama | api
+  model: nomic-embed-text
+  ollama_endpoint: http://localhost:11434
+
+  # For backend: api
+  # api_base: https://api.openai.com/v1
+  # api_key_env: OPENAI_API_KEY
+  # api_model: text-embedding-3-small
