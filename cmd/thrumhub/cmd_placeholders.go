@@ -12,10 +12,8 @@ func stub(name, short string) *cobra.Command {
 	}
 }
 
-func cmdInit() *cobra.Command     { return stub("init", "Scaffold a hub at the given path") }
-func cmdStatus() *cobra.Command   { return stub("status", "Show hub status") }
-func cmdFeedback() *cobra.Command { return stub("feedback", "Record thumbs up/down on a query") }
-func cmdHistory() *cobra.Command  { return stub("history", "Show recent queries") }
+func cmdInit() *cobra.Command   { return stub("init", "Scaffold a hub at the given path") }
+func cmdStatus() *cobra.Command { return stub("status", "Show hub status") }
 func cmdDebug() *cobra.Command {
 	c := stub("debug", "Debug and test helpers")
 	return c
