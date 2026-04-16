@@ -1,0 +1,21 @@
+# Local dev docs, plans, specs — not for public repo
+dev-docs/
+
+# Build artifacts
+bin/
+dist/
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Local telemetry (per-machine operational data)
+telemetry/
+
+# Local config overrides
+*.local.yaml
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key

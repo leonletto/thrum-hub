@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "thrum_hub",
+  "project_id": "1754f17c-e03b-4380-b196-271081cd803e"
+}
